@@ -12,5 +12,10 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+#app {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
 </style>
