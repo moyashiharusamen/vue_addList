@@ -38,8 +38,6 @@ export default {
         text: listText.value
       })
 
-      console.log(this.list)
-
       listId.value = ''
       listNumber.value = ''
       listText.value = ''
