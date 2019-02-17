@@ -13,6 +13,9 @@ export default {
 </script>
 
 <style lang="scss">
+body {
+  background: #ccc;
+}
 #app {
   width: 100%;
   max-width: 1000px;
