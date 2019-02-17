@@ -6,12 +6,12 @@
 
 <script>
 import InputList from '@/components/InputList'
-import RegisterdList from '@/components/RegisterdList'
+import RegisteredList from '@/components/RegisteredList'
 
 export default {
   comments: {
     InputList,
-    RegisterdList
+    RegisteredList
   }
 }
 </script>
