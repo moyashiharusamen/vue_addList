@@ -6,9 +6,9 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   state: {
     list: [
-      { id: 1, number: 111, text: 'hoge' },
-      { id: 2, number: 222, text: 'fuga' },
-      { id: 3, number: 333, text: 'piyo' }
+      { id: 3, comment: 'comment1', number: 111, text: 'hoge' },
+      { id: 2, comment: 'comment1', number: 222, text: 'fuga' },
+      { id: 1, comment: 'comment1', number: 333, text: 'piyo' }
     ]
   },
   getters: {
