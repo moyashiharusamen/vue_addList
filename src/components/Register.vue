@@ -1,6 +1,8 @@
 <template>
   <div class="add-list">
     <h1>Add list</h1>
+    <InputList />
+    <RegisteredList />
   </div>
 </template>
 

@@ -8,13 +8,15 @@
 import 'normalize.css'
 
 export default {
-  name: 'App'
+  created () {
+    // console.log(this.$store.getters.list)
+  }
 }
 </script>
 
 <style lang="scss">
 body {
-  background: #ccc;
+  background: #eee;
 }
 #app {
   width: 100%;
