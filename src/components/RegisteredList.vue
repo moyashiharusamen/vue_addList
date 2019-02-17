@@ -6,19 +6,21 @@
       <thead>
         <tr>
           <th>ID</th>
+          <th>Comment</th>
           <th>Number</th>
           <th>Text</th>
           <td></td>
         </tr>
       </thead>
-      <tbody>
-        <tr v-for="(item, index) in list" :key="index">
-          <td>{{ item.id }}</td>
+      <transition-group tag="tbody" name="list">
+        <tr v-for="item in list" :key="item.id">
+          <th>{{ item.id }}</th>
+          <td>{{ item.comment }}</td>
           <td>{{ item.number }}</td>
           <td>{{ item.text }}</td>
           <td><button @click="doRemove(item)">Delete</button></td>
         </tr>
-      </tbody>
+      </transition-group>
     </table>
   </div>
 </template>
@@ -45,16 +47,12 @@ table {
   width: 100%;
   border-collapse: collapse;
 
-  tr {
-    /*border: 1px solid #000080;*/
-  }
-
   thead {
     tr {
       border-bottom: 2px solid #000080;
       th,
       td{
-        width: 250px;
+        width: 200px;
         padding: 20px 0;
         font-size: 20px;
       }
@@ -64,6 +62,7 @@ table {
   tbody {
     tr {
       border-bottom: 2px solid #ccc;
+
       td {
         padding: 20px 10px;
       }
@@ -72,6 +71,15 @@ table {
         margin-left: 10px;
       }
     }
+  }
+
+  .list-enter-active {
+    transition: 1s;
+  }
+
+  .list-enter {
+    opacity: 0;
+    transform: translateX(100%);
   }
 }
 </style>

@@ -3,8 +3,8 @@
     <h2>Input List</h2>
 
     <form class="input-area" @submit.prevent="doAdd">
-      <label for="id">ID: </label>
-      <input type="text" id="id" ref="id">
+      <label for="comment">comment: </label>
+      <input type="text" id="comment" ref="comment">
       <label for="number">Number: </label>
       <input type="text" id="number" ref="number">
       <label for="text">Text: </label>
@@ -24,21 +24,23 @@ export default {
   },
   methods: {
     doAdd (state, value) {
-      const listId = this.$refs.id
+      const listComment = this.$refs.comment
       const listNumber = this.$refs.number
       const listText = this.$refs.text
+      const listLength = this.list.length
 
-      if (!listId.value.length || !listNumber.value.length || !listText.value.length) {
+      if (!listComment.value.length || !listNumber.value.length || !listText.value.length) {
         return false
       }
 
-      this.list.push({
-        id: listId.value,
+      this.list.unshift({
+        id: listLength + 1,
+        comment: listComment.value,
         number: listNumber.value,
         text: listText.value
       })
 
-      listId.value = ''
+      listComment.value = ''
       listNumber.value = ''
       listText.value = ''
     }
