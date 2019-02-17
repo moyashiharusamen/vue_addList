@@ -9,7 +9,7 @@ import InputList from '@/components/InputList'
 import RegisteredList from '@/components/RegisteredList'
 
 export default {
-  comments: {
+  components: {
     InputList,
     RegisteredList
   }
