@@ -1,5 +1,5 @@
 <template>
-  <div class="registered-list">
+  <div>
     <h2>Registered List</h2>
 
     <table>

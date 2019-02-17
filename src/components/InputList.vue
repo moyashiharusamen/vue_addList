@@ -1,5 +1,5 @@
 <template>
-  <div class="input-list">
+  <div>
     <h2>Input List</h2>
 
     <form class="input-area" @submit.prevent="doAdd">

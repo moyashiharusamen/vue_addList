@@ -1,8 +1,8 @@
 <template>
   <div class="add-list">
     <h1>Add list</h1>
-    <InputList />
-    <RegisteredList />
+    <InputList class="input-list" />
+    <RegisteredList class="registered-list" />
   </div>
 </template>
 
